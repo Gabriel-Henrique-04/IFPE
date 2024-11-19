@@ -1,21 +1,17 @@
-a = int(input("Digite um número: "))
-b = int(input("Digite outro número: "))
-c = int(input("Digite novamente outro número: "))
+primeiro = int(input("Digite o primeiro número: "))
+segundo = int(input("Digite o segundo número: "))
+cal = int(input("Qual a operação que você deseja fazer? \n Digite 1 para o primeiro número ser elevado ao segundo \n Digite 2 para a soma dos quadrados de cada um dos números \n Digite 3 para a soma das raízes quadradas de cada um dos números "))
 
-if a > b :
-    print("FÉ o maior valor: ", a) 
 
-if a > c :
-    print("É o maior valor: ", a)
-    
-if b > a :
-    print("É o maior valor: ", b) 
+match cal:
+    case 1:
+        print(f"O resultado do primeiro número elevado ao segundo é: {(primeiro**segundo):.1f}")
 
-if b > c :
-    print("É o maior valor: ", b) 
+    case 2:
+        print(f"A soma dos quadrados de cada um dos números: {((primeiro**2)+(segundo**2)):.1f}")
 
-if c > a :
-    print("É o maior valor: ", c)
+    case 3:
+        print(f"A soma das raízes quadradas de cada um dos números: {(primeiro**(1/2))+(segundo**(1/2)):.1f}")
 
-if c > b :
-    print("É o maior valor: ", c)
+    case _:
+        print("ERRO")
